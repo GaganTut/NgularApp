@@ -25,10 +25,11 @@ const HEROES: Hero[] = [
 })
 
 export class AppComponent {
-  hero: Hero = {
-    id: 1,
-    name: 'Gagan'
-  }
+  selectedHero: Hero;
+
+  onSelect(hero: Hero): void {
+  this.selectedHero = hero;
+}
 
   heroes = HEROES;
 }
